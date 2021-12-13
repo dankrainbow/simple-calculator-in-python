@@ -17,25 +17,25 @@ titletext = print("""
  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀       ▀       ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  by dank rainbow
 """)
 def add(num1,numb2):
-  answer = num1 +numb2
-  return answer
+  answer = num1 +numb2 ## add the numbers
+  return answer ## return the answer
 def divide(num1,numb2):
   try:
-    answer = num1/numb2
-    return answer
-  except ZeroDivisionError:
+    answer = num1/numb2 ## try dividing
+    return answer ## then return the answer
+  except ZeroDivisionError: ## except when trying to divide by zero, then send cant divide by zero
     print("Can't divide by zero!")
-def subtract(num1,numb2):
-  answer = num1-numb2
-  return answer
+def subtract(num1,numb2): 
+  answer = num1-numb2 ## subtract the numbers
+  return answer ## return the answer
 def multiply(num1,numb2):
-  answer = num1*numb2
-  return answer
+  answer = num1*numb2 ## multiply
+  return answer ## return answer
 def squareroot(numb):
-  answer = sqrt(numb)
-  return answer
+  answer = sqrt(numb) ## square root
+  return answer ## return the answer
 
-while True:
+while True: ## forever do the following code
     print(titletext)
     print("Select operation.")
     print("1 - Add")
@@ -43,33 +43,33 @@ while True:
     print("3 - Multiply")
     print("4 - Divide")
     print("5 - Square root")
-    choice = input("Whats your choice: ")
+    choice = input("Whats your choice: ") ## choice? 
     if choice == "1":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = add(first,second)
-        print(f"The answer is: {answer}")
+        print(f"The answer is: {answer}") ## using the returned answer output the answer
     elif choice == "2":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = subtract(first,second)
-        print(f"The answer is: {answer}")
+        print(f"The answer is: {answer}") ## using the returned answer output the answer
     elif choice == "3":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = multiply(first,second)
-        print(f"The answer is: {answer}")
+        print(f"The answer is: {answer}") ## using the returned answer output the answer
     elif choice == "4":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = divide(first,second)
-        print(f"The answer is: {answer}")
+        print(f"The answer is: {answer}") ## using the returned answer output the answer
     elif choice == "5":
         first = float(input("Number to square root: "))
         answer = sqrt(first)
-        print(f"The answer is: {answer}")
-    repeat = input("Need another calculation (yes/no): ")
-    os.system("cls")
-    if repeat == "no":
-        print("Thanks for using the calculator")
-        break
+        print(f"The answer is: {answer}") ## using the returned answer output the answer
+    repeat = input("Need another calculation (yes/no): ") ## check if another calculation is needed
+    os.system("cls") ## clear the console before repeating
+    if repeat == "no": ## if dont repeat
+        print("Thanks for using the calculator") ## say thanks
+        break ## break the loop, ending the code
