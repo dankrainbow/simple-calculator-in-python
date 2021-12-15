@@ -1,6 +1,13 @@
 ## calculator
 import os
 from math import sqrt
+import time
+###
+
+def slowtype(string):
+  for letter in string:
+    print(letter, end="", flush=True)
+    time.sleep(0.05)
 
 os.system("title Simple Calculator in python")
 titletext = print("""
@@ -48,28 +55,28 @@ while True: ## forever do the following code
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = add(first,second)
-        print(f"The answer is: {answer}") ## using the returned answer output the answer
+        slowtype(f"The answer is: {answer}\n") ## using the returned answer output the answer
     elif choice == "2":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = subtract(first,second)
-        print(f"The answer is: {answer}") ## using the returned answer output the answer
+        slowtype(f"The answer is: {answer}\n") ## using the returned answer output the answer
     elif choice == "3":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = multiply(first,second)
-        print(f"The answer is: {answer}") ## using the returned answer output the answer
+        slowtype(f"The answer is: {answer}\n") ## using the returned answer output the answer
     elif choice == "4":
         first = float(input("First number: "))
         second = float(input("Second number: "))
         answer = divide(first,second)
-        print(f"The answer is: {answer}") ## using the returned answer output the answer
+        slowtype(f"The answer is: {answer}\n") ## using the returned answer output the answer
     elif choice == "5":
         first = float(input("Number to square root: "))
         answer = sqrt(first)
-        print(f"The answer is: {answer}") ## using the returned answer output the answer
+        slowtype(f"The answer is: {answer}\n") ## using the returned answer output the answer
     repeat = input("Need another calculation (yes/no): ") ## check if another calculation is needed
     os.system("cls") ## clear the console before repeating
     if repeat == "no": ## if dont repeat
-        print("Thanks for using the calculator") ## say thanks
+        slowtype("Thanks for using the calculator\n") ## say thanks
         break ## break the loop, ending the code
